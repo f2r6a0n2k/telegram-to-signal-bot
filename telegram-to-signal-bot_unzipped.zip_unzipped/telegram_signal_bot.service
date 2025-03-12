@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram to Signal Forwarder Bot
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /Pfad/zum/bot.py
+WorkingDirectory=/Pfad/zum/Projektordner
+Restart=always
+User=dein-user
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=multi-user.target
